@@ -78,8 +78,20 @@ console.log(c, d);  //output is 3 & undefined.
 
 {
     let name="mohit"
-    var num= 2
+    var num= 2              // its global scope also.
 }
 // console.log(typeof name);   // undefined because of let variable  {block scope}
-// console.log(typeof num);    // here type is number   var has a functional scope
+// console.log(typeof num);    // here type is number   var has a functional scope   & Global scope also
 
+
+
+function scopesDefination(){
+    var name="mohit";
+    let age =30;
+    // let age=55;  u cannot redeclare the value its show error.
+    // age=55       this is true u can do this.
+    // console.log("age of let variable",age)
+}
+scopesDefination()
+
+// console.log("accesing from out side ",name, age);   // error
